@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Chris Dane German</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&family=Pinyon+Script&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --fg: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.75rem 1rem;
+      z-index: 100;
+      background: transparent;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .navbar a {
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 500;
+      opacity: 0.85;
+      transition: opacity 0.3s ease;
+    }
+
+    .navbar a:hover {
+      opacity: 1;
+    }
+
+    .navbar a.active {
+      opacity: 1;
+      font-weight: 700;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .page {
+      padding: 7rem 1.5rem 4rem;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+
+    .headshot {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #222222, #111111);
+      border: 1px solid rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .bio {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+    }
+
+    .bio p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: rgba(255,255,255,0.9);
+      max-width: 640px;
+    }
+
+    .testimonial {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.18);
+      text-align: center;
+    }
+
+    .testimonial blockquote {
+      font-family: 'Pinyon Script', cursive;
+      font-size: clamp(1.7rem, 3.2vw, 2.7rem);
+      line-height: 1.4;
+      margin-bottom: 0.9rem;
+      font-weight: 400;
+    }
+
+    .testimonial .attribution {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 760px) {
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .headshot {
+        width: 220px;
+        height: 220px;
+        margin: 0 auto;
+      }
+
+      .bio {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar ul {
+        gap: 1rem;
+      }
+
+      .navbar a {
+        font-size: 0.72rem;
+      }
+
+      .page {
+        padding-top: 6.5rem;
+      }
+
+      .headshot {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html" class="active" aria-current="page">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <section class="about-layout reveal" aria-label="About the photographer">
+      <div class="headshot" aria-label="Photographer headshot placeholder">
+        HEADSHOT<br>PLACEHOLDER
+      </div>
+
+      <div class="bio">
+        <p>
+          Chris Dane German is a landscape and action sports photographer whose work is shaped by the wild beauty of the places he explores and the intensity of the moments he captures. His images are rooted in the mountains, snow, and open spaces of the Sea-To-Sky region, where light, scale, and movement all matter.
+        </p>
+        <p>
+          He is also the editor of SBC SKIER Magazine, and his practice extends beyond photography into writing, graphic design, and videography. He has lived in the Sea-To-Sky area for a dozen years, and he sells fine art prints while also working with clients to document trips, adventures, and milestone experiences such as heli-skiing, cat-skiing, guided backcountry adventures, expeditions, and other unforgettable moments worth sharing.
+        </p>
+      </div>
+    </section>
+
+    <section class="testimonial reveal" aria-label="Testimonial">
+      <blockquote>“The world is best remembered in motion, light, and stillness.”</blockquote>
+      <div class="attribution">CHRIS DANE GERMAN</div>
+    </section>
+  </main>
+  <script>
+    const revealItems = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealItems.forEach((item) => observer.observe(item));
+  </script>
+</body>
+</html>
